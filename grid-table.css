@@ -1,0 +1,32 @@
+.grid-table {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-auto-rows: auto;
+    margin-bottom: 2rem;
+
+    &.justify-center .grid-cell {
+        text-align: center;
+    }
+
+    & .grid-row {
+        display: contents;
+
+        &.header-row .grid-cell {
+            font-weight: bold;
+            text-align: center;
+            background-color: #404040;
+            color: #FFFFFF;
+        }
+
+        &:not(.header-row):nth-child(odd) .grid-cell {
+            background-color: #e8e9eb;
+        }
+
+        & .grid-cell {
+            padding: 0.6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;                    
+        }
+    }
+}
